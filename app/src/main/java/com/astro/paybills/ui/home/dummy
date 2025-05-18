@@ -1,0 +1,22 @@
+    Button(
+                    onClick = onTakeOutClick,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = 8.dp)
+                ) {
+                    Text(text = "Take Out", fontSize = 20.sp)
+                }
+
+
+
+                Text(
+                                            text = category,
+                                            modifier = Modifier
+                                                .fillMaxWidth()
+                                                .padding(vertical = 12.dp)
+                                                .clickable {
+                                                    //onCategorySelected(category)
+                                                    scope.launch { drawerState.close() }
+                                                }
+
+                                        )
